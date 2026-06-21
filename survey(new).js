@@ -141,7 +141,7 @@ const I18N = {
   }
 };
 
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby_doJGyiDZSn88ZbxIQqDF8nTb0TFzStbp9cYEBypdzOWOIkMXvXylO9f1Ie2rWsz79A/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxgeq1fsfOzonphV1eP67Ti_8CzlTGJekBQQ3l845fe2H_c1St5vGQe69EBc6YhOnl3/exec';
 
 // ── State ─────────────────────────────────────────────────────────────
 const STORAGE_KEY = 'misinfo_survey_v1';
