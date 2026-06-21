@@ -389,7 +389,7 @@ const I18N = {
     q1Labels: [
       { val: 1, label: "1\n极不可能" },
       { val: 2, label: "2\n中度不可能" },
-      { val: 3, label: "3\n稍有不可能" },
+      { val: 3, label: "3\n稍不可能" },
       { val: 4, label: "4\n稍有可能" },
       { val: 5, label: "5\n中度可能" },
       { val: 6, label: "6\n极有可能" }
@@ -516,7 +516,6 @@ function render() {
   const currentTag = state.lang === 'zh' ? item.tag_zh : item.tag_en;
   const currentText = state.lang === 'zh' ? item.text_zh : item.text_en;
 
-  // 右下角悬浮按钮的样式
   const floatingBtnHTML = `
     <button onclick="toggleLang()" style="position: fixed; bottom: 24px; right: 24px; z-index: 9999; width: 50px; height: 50px; border-radius: 50%; background-color: #ffffff; border: 1px solid #e0e0e0; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer; font-weight: bold; color: #333; display: flex; align-items: center; justify-content: center; font-size: 14px; transition: transform 0.2s;">
       ${t.langToggle}
@@ -540,7 +539,7 @@ function render() {
         </div>
         <div class="scale-row" style="flex-wrap: wrap;">
           ${t.q1Labels.map(o => `
-            <button class="scale-btn${ans.q1 === o.val ? ' sel-' + o.val : ''}"
+            <button class="scale-btn q1-btn${ans.q1 === o.val ? ' sel-' + o.val : ''}"
               onclick="pick(${item.id}, 'q1', ${o.val})"
               style="white-space:pre-line; flex: 1 1 auto; min-width: 45px;">${o.label}</button>
           `).join('')}
@@ -559,6 +558,21 @@ function render() {
           `).join('')}
         </div>
       </div>
+
+      <div class="q-block">
+        <div class="q-label">
+          <span class="qnum">Q3</span>
+          ${t.q3Text}
+        </div>
+        <div class="scale-row" style="flex-wrap: wrap;">
+          ${t.q3Labels.map(o => `
+            <button class="scale-btn q3-btn${ans.q3 === o.val ? ' sel-' + o.val : ''}"
+              onclick="pick(${item.id}, 'q3', ${o.val})"
+              style="white-space:pre-line; flex: 1 1 auto; min-width: 45px;">${o.label}</button>
+          `).join('')}
+        </div>
+      </div>
+
     </div>
 
     <div class="nav" style="display: flex; gap: 10px; flex-wrap: wrap;">
@@ -571,25 +585,33 @@ function render() {
   ${floatingBtnHTML}`;
 }
 
+// 修复验证逻辑：必须三道题都回答完，"下一题"按钮才会亮起
 function canAdvance() {
   const item = ITEMS[state.cur];
   const ans = state.answers[item.id] || {};
-  return ans.q1 !== undefined && ans.q2 !== undefined;
+  return ans.q1 !== undefined && ans.q2 !== undefined && ans.q3 !== undefined;
 }
 
+// 修复点击逻辑：增加对 Q3 按钮颜色高亮的判定
 function pick(id, q, val) {
   if (!state.answers[id]) state.answers[id] = {};
   state.answers[id][q] = val;
   saveState();
+  
   if (q === 'q1') {
-    document.querySelectorAll('.scale-btn').forEach((btn, i) => {
-      btn.className = 'scale-btn' + (I18N[state.lang].q1Labels[i].val === val ? ' sel-' + val : '');
+    document.querySelectorAll('.q1-btn').forEach((btn, i) => {
+      btn.className = 'scale-btn q1-btn' + (I18N[state.lang].q1Labels[i].val === val ? ' sel-' + val : '');
     });
-  } else {
+  } else if (q === 'q2') {
     document.querySelectorAll('.share-btn').forEach((btn, i) => {
       btn.className = 'share-btn' + (I18N[state.lang].q2Labels[i].val === val ? ' selected' : '');
     });
+  } else if (q === 'q3') {
+    document.querySelectorAll('.q3-btn').forEach((btn, i) => {
+      btn.className = 'scale-btn q3-btn' + (I18N[state.lang].q3Labels[i].val === val ? ' sel-' + val : '');
+    });
   }
+  
   const btnNext = document.getElementById('btnNext');
   if (btnNext) btnNext.disabled = !canAdvance();
 }
@@ -626,7 +648,6 @@ function renderEnd() {
   const t = I18N[state.lang];
   const subText = t.endSub.replace('{count}', count).replace('{elapsed}', elapsed);
 
-  // 保持相同的右下角悬浮按钮
   const floatingBtnHTML = `
     <button onclick="toggleLang()" style="position: fixed; bottom: 24px; right: 24px; z-index: 9999; width: 50px; height: 50px; border-radius: 50%; background-color: #ffffff; border: 1px solid #e0e0e0; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer; font-weight: bold; color: #333; display: flex; align-items: center; justify-content: center; font-size: 14px; transition: transform 0.2s;">
       ${t.langToggle}
@@ -666,10 +687,11 @@ function buildExportData() {
     lang: state.lang,
     answers: ITEMS.map(item => ({
       item_id: item.id,
-      tag: item.tag_zh, // 统一记录中文Tag用于分析对齐
+      tag: item.tag_zh,
       text: item.text_zh,
       q1_credibility: state.answers[item.id]?.q1 ?? null,
       q2_heard: state.answers[item.id]?.q2 ?? null,
+      q3_importance: state.answers[item.id]?.q3 ?? null, // 新增 Q3 的存储结构
     }))
   };
 }
@@ -685,8 +707,9 @@ function exportJSON() {
 
 function exportCSV() {
   const data = buildExportData();
+  // 在表头新增 q3_importance 列
   const rows = [
-    ['respondent_id', 'timestamp', 'lang', 'item_id', 'tag', 'text', 'q1_credibility_1to7', 'q2_heard'],
+    ['respondent_id', 'timestamp', 'lang', 'item_id', 'tag', 'text', 'q1_credibility_1to7', 'q2_heard', 'q3_importance_1to6'],
     ...data.answers.map(a => [
       data.respondent_id,
       data.timestamp,
@@ -695,7 +718,8 @@ function exportCSV() {
       a.tag,
       `"${a.text.replace(/"/g, '""')}"`,
       a.q1_credibility ?? '',
-      a.q2_heard ?? ''
+      a.q2_heard ?? '',
+      a.q3_importance ?? '' // 将 Q3 数据写入 CSV
     ])
   ];
   const csv = rows.map(r => r.join(',')).join('\n');
@@ -704,33 +728,3 @@ function exportCSV() {
   a.href = URL.createObjectURL(blob);
   a.download = `misinfo_${data.respondent_id}_${Date.now()}.csv`;
   a.click();
-}
-
-function resetSurvey() {
-  if (!confirm(state.lang === 'zh' ? '确定要清除所有答案并重新开始吗？' : 'Are you sure you want to clear all answers and restart?')) return;
-  state = { cur: 0, lang: state.lang, answers: {}, startTime: Date.now(), done: false };
-  saveState();
-  render();
-  updateHeader();
-}
-
-// ── Network Submission ─────────────────────────────────────────────────
-async function submitToSheets() {
-  const data = buildExportData();
-  try {
-    const response = await fetch(APPS_SCRIPT_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: {
-        'Content-Type': 'text/plain;charset=utf-8'
-      },
-      body: JSON.stringify(data)
-    });
-    console.log("数据同步请求已发送！");
-  } catch(err) {
-    console.error("同步出错:", err); 
-  }
-}
-
-// ── Init ───────────────────────────────────────────────────────────────
-render();
