@@ -728,3 +728,31 @@ function exportCSV() {
   a.href = URL.createObjectURL(blob);
   a.download = `misinfo_${data.respondent_id}_${Date.now()}.csv`;
   a.click();
+function resetSurvey() {
+  if (!confirm(state.lang === 'zh' ? '确定要清除所有答案并重新开始吗？' : 'Are you sure you want to clear all answers and restart?')) return;
+  state = { cur: 0, lang: state.lang, answers: {}, startTime: Date.now(), done: false };
+  saveState();
+  render();
+  updateHeader();
+}
+
+// ── Network Submission ─────────────────────────────────────────────────
+async function submitToSheets() {
+  const data = buildExportData();
+  try {
+    const response = await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+      },
+      body: JSON.stringify(data)
+    });
+    console.log("数据同步请求已发送！");
+  } catch(err) {
+    console.error("同步出错:", err); 
+  }
+}
+
+// ── Init ───────────────────────────────────────────────────────────────
+render(); // 这行极其重要，它是启动整个界面的引擎
