@@ -3,14 +3,14 @@ const ITEMS = [
   {
     id: 1,
     tag_zh: "健康", tag_en: "Health",
-    text_zh: "按摩疗法可能增强免疫系统以对抗感冒和流感",
-    text_en: "Massage Therapy May Boost Immune System to Combat Cold, Flu"
+    text_zh: "寨卡疫苗有望治疗致命的脑癌",
+    text_en: "Zika vaccine shows promise for treating deadly brain cancer"
   },
   {
     id: 2,
     tag_zh: "健康", tag_en: "Health",
     text_zh: "牛奶蛋白被证明可以减轻化疗的副作用",
-    text_en: "Milk protein shown to alleviate chemotherapy side effects"
+    text_en: "Milk protein shown to alleviate chemotherapy side effects."
   },
   {
     id: 3,
@@ -89,6 +89,126 @@ const ITEMS = [
     tag_zh: "健康", tag_en: "Health",
     text_zh: "新兴研究表明，蒙特莫伦西酸樱桃可能有助于增强肠道健康",
     text_en: "New emerging research suggests Montmorency tart cherries may help enhance gut health"
+  },
+  {
+    id: 16,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "益生菌可以帮助数百万患有双相情感障碍的患者",
+    text_en: "Probiotics could help millions of patients suffering from bipolar disorder"
+  },
+  {
+    id: 17,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "吃洋葱有助于对抗极端高温",
+    text_en: "Eating onions helps combat extreme heat"
+  },
+  {
+    id: 18,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "癌症筛查测试包的灭菌使患者处于危险之中",
+    text_en: "Sterilization of cancer screening test kits puts patients at riske"
+  },
+  {
+    id: 19,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "松节油可以帮助排毒。每天喝少量可以保持身体健康",
+    text_en: "Turpentine can help detoxify. Drinking a small amount every day can maintain good health"
+  },
+  {
+    id: 20,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "不吃蔬菜会改善粉刺",
+    text_en: "Not eating vegetables will improve acne"
+  },
+  {
+    id: 21,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "煮沸的沙司可以治疗咳嗽",
+    text_en: "Boiled Sarsi can treat coughs"
+  },
+  {
+    id: 22,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "双氧水可以用来治疗百日咳",
+    text_en: "Hydrogen peroxide can be used to treat pertussis"
+  },
+  {
+    id: 23,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "小苏打（也被称为碳酸氢钠）可以帮助人们对抗流感病毒",
+    text_en: "Baking soda (also known as sodium bicarbonate) can help people fight against the flu virus"
+  },
+  {
+    id: 24,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "吸入二氧化碳可以改善焦虑和偏头痛",
+    text_en: "Inhaling carbon dioxide can improve anxiety and migraines"
+  },
+  {
+    id: 25,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "含铅涂料可以保护房屋免受电磁辐射",
+    text_en: "Lead-based paint can protect houses from electromagnetic radiation"
+  },
+  {
+    id: 26,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "饮用芦荟和蛋清的混合物可以改善糖尿病和高血压",
+    text_en: "Drinking a mixture of aloe vera and egg white can improve diabetes and hypertension"
+  },
+  {
+    id: 27,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "采用低胆固醇饮食或服用降胆固醇药物会增加患阿尔茨海默病的风险",
+    text_en: "Adopting a low-cholesterol diet or taking cholesterol medications can increase the risk of developing Alzheimer's disease"
+  },
+  {
+    id: 28,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "人乳头瘤病毒（HPV）疫苗可能导致女性不孕",
+    text_en: "Human papillomavirus (HPV) vaccination may lead to female infertility"
+  },
+  {
+    id: 29,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "糖苹果叶茶可以帮助治疗子宫内膜癌（一种影响子宫上部的癌症）",
+    text_en: "Sugar apple leaf tea can help treat endometrial cancer (a type of cancer that affects the upper part of the uterus)"
+  },
+  {
+    id: 30,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "喝椰汁可以帮助治疗肾脏疾病",
+    text_en: "Drinking sprouted coconut juice can help treat kidney disease"
+  },
+  {
+    id: 31,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "人工流产会增加患乳腺癌的风险",
+    text_en: "Induced abortion increases the risk of breast cancer"
+  },
+  {
+    id: 32,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "尼古丁在一定程度上能治疗神经系统疾病",
+    text_en: "Nicotine can cure neurological diseases to a certain extent"
+  },
+  {
+    id: 33,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "氟化钠是导致癌症的主要原因之一。氟化钠是一种化学化合物，通常被添加到牙膏中，在一些国家，还被添加到饮用水中。它的主要目的是通过加强牙釉质来防止蛀牙。",
+    text_en: "Sodium fluoride is one of the main causes of cancer.Sodium fluoride is a chemical compound commonly added to toothpaste and, in some countries, drinking water.  Its main purpose is to help prevent tooth decay by strengthening tooth enamel"
+  },
+  {
+    id: 34,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "太阳风暴会影响人体健康，并可能影响人体，引起生物钟紊乱、焦虑和心悸等症状",
+    text_en: "Solar storms can affect human health and may impact the human body, causing symptoms such as disrupted biological clocks, anxiety, and palpitations"
+  },
+  {
+    id: 35,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "太阳风暴会影响人体健康，并可能影响人体，引起生物钟紊乱、焦虑和心悸等症状",
+    text_en: "New research has uncovered that the true cause of fibromyalgia is an excess number of specific nerves found near a specific kind of blood vessel in the hands and feet, ending the controversy over the disease’s cause and mechanism"
   },
   {
     id: 16,
