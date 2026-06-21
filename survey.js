@@ -207,118 +207,205 @@ const ITEMS = [
   {
     id: 35,
     tag_zh: "健康", tag_en: "Health",
-    text_zh: "太阳风暴会影响人体健康，并可能影响人体，引起生物钟紊乱、焦虑和心悸等症状",
-    text_en: "New research has uncovered that the true cause of fibromyalgia is an excess number of specific nerves found near a specific kind of blood vessel in the hands and feet, ending the controversy over the disease’s cause and mechanism"
+    text_zh: "新的研究发现，纤维肌痛的真正原因是手脚的一种特定血管附近的特定神经过多",
+    text_en: "New research has found that the real cause of fibromyalgia is an excessive number of specific nerves near a particular type of blood vessel in the hands and feet"
   },
   {
-    id: 16,
+    id: 36,
+    tag_zh: "健康", tag_en: "Health",
+    text_zh: "2025年8月，德国科学家开发出一种无需手术即可再生关节软骨的凝胶",
+    text_en: "German scientists developed a gel to regrow joint cartilage without surgery in August 2025"
+  },
+  {
+    id: 37,
     tag_zh: "科学", tag_en: "Science",
-    text_zh: "运动后进食会让锻炼白费，食物会立刻转化为脂肪",
-    text_en: "Eating after a workout makes it useless, and the food immediately turns into fat"
+    text_zh: "在美国印第安纳州，车牌侧面的一个微小的5G标记跟踪支持蜂窝网络的5G基础设施",
+    text_en: "A tiny 5G mark on the side of a license plate in Indiana, USA, tracks the 5G infrastructure that supports cellular networks"
   },
   {
-    id: 17,
+    id: 38,
     tag_zh: "科学", tag_en: "Science",
-    text_zh: "电热毯、暖宝宝有辐射，会致癌",
-    text_en: "Electric blankets and hand warmers emit radiation and may cause cancer."
+    text_zh: "下一代天气雷达（NEXRAD）系统由多个美国政府机构操作，可以探测风和降水，并引导飓风海伦",
+    text_en: "The next-generation weather radar (NEXRAD) system, operated by multiple US government agencies, can detect wind and precipitation and guide Hurricane Helen"
   },
   {
-    id: 18,
+    id: 39,
     tag_zh: "科学", tag_en: "Science",
-    text_zh: "小苏打加白醋可以疏通下水道",
-    text_en: "Baking soda and white vinegar can unclog drains."
+    text_zh: "中国发明了一种“人造子宫”来养育人类婴儿",
+    text_en: "China has invented an'artificial womb'for nurturing human infants"
   },
   {
-    id: 19,
+    id: 40,
     tag_zh: "科学", tag_en: "Science",
-    text_zh: "5G基站辐射大",
-    text_en: "5G base stations emit high levels of radiation."
+    text_zh: "日本科学家成功发明了一种核磁共振成像机器，可以记录梦境并将其重建以供日后观看",
+    text_en: "Japanese scientists successfully created an MRI machine that can record dreams and reconstruct them to be viewed later"
   },
   {
-    id: 20,
+    id: 41,
     tag_zh: "科学", tag_en: "Science",
-    text_zh: "空气炸锅易产生致癌物",
-    text_en: "Air fryers may produce carcinogens"
+    text_zh: "日本政府出于对健康的担忧，禁止开发5G技术",
+    text_en: "The Japanese government banned the development of 5G technology over health concerns"
   },
   {
-    id: 21,
+    id: 42,
     tag_zh: "科学", tag_en: "Science",
-    text_zh: "佩戴金属饰品，更容易被雷击",
-    text_en: "Wearing metal jewelry makes you more susceptible to lightning strikes."
+    text_zh: "在读卡器中输入错误的密码可以保护你免受借记卡欺诈",
+    text_en: "Entering the wrong PIN into a card reader will protect you against debit card fraud"
   },
   {
-    id: 22,
+    id: 43,
     tag_zh: "科学", tag_en: "Science",
-    text_zh: "尿液有泡沫意味着肾不好",
-    text_en: "Foamy urine means bad kidneys"
+    text_zh: "中国科学家开发出世界上最轻的“脑控”设备，可以将蜜蜂变成远程控制的“半机械人”无人机，用于军事监视和侦察任务",
+    text_en: "Chinese scientists have developed the world's lightest'brain control'device to turn bees into remotely controlled'cyborg'drones for military surveillance and reconnaissance missions"
   },
   {
-    id: 23,
+    id: 44,
     tag_zh: "科学", tag_en: "Science",
     text_zh: "新能源车企电车污染比油车更严重",
     text_en: "Electric vehicles from new energy vehicle manufacturers cause more pollution than gasoline vehicles."
   },
   {
-    id: 24,
+    id: 45,
     tag_zh: "科学", tag_en: "Science",
     text_zh: "卧室里放WiFi路由器会致癌",
     text_en: "Putting a WiFi router in the bedroom causes cancer"
   },
   {
-    id: 25,
+    id: 46,
     tag_zh: "科学", tag_en: "Science",
-    text_zh: "聚酯纤维衣服是旧塑料瓶做的",
-    text_en: "Polyester clothing is made from old plastic bottles."
+    text_zh: "没有透明的太阳能电池板",
+    text_en: "There is no transparent solar panel"
   },
   {
-    id: 26,
+    id: 47,
     tag_zh: "科学", tag_en: "Science",
-    text_zh: "大白菜上的小黑点意味着它已经坏了，必须扔掉",
-    text_en: "Small black spots on Napa cabbage mean it has gone bad and must be thrown away"
+    text_zh: "日本发明了一种硬币大小的发电机，可以“凭空”地全天候发电",
+    text_en: "Japan has invented a coin-sized generator that can generate all-weather electricity‘out of thin air’"
   },
   {
-    id: 27,
+    id: 48,
     tag_zh: "科学", tag_en: "Science",
-    text_zh: "地震余震较小，不用担心",
-    text_en: "The aftershocks were minor, so there's no need to worry."
+    text_zh: "科技企业家埃隆·马斯克正在创造一种代理机器人，它可以让人类胎儿受精并携带9个月",
+    text_en: "Tech entrepreneur Elon Musk is creating surrogate robots that can fertilize and carry a human fetus for nine months"
   },
   {
-    id: 28,
+    id: 49,
     tag_zh: "科学", tag_en: "Science",
-    text_zh: "空气炸锅做的食物致癌",
-    text_en: "Food cooked in an air fryer is carcinogenic."
+    text_zh: "可穿戴技术声称可以将智能手机直接投射到前臂上",
+    text_en: "Wearable technology claims to project your smartphone directly onto your forearm"
   },
   {
-    id: 29,
+    id: 50,
     tag_zh: "科学", tag_en: "Science",
-    text_zh: "汽车车身轻量化，让安全性下降",
-    text_en: "Lighter car bodies reduce safety."
+    text_zh: "实验证明在微波炉里煮过的水对植物有害",
+    text_en: "Experiment proves water that has been boiled in a microwave oven is harmful to plants"
   },
   {
-    id: 30,
+    id: 51,
     tag_zh: "科学", tag_en: "Science",
-    text_zh: "智能电视会自动监听用户说话并上传",
-    text_en: "Smart TVs automatically listen to the user's speech and upload it."
+    text_zh: "有一种装置可以在没有电源的情况下点亮灯泡",
+    text_en: "There is a device that can light up a bulb without power supply"
+  },
+  {
+    id: 52,
+    tag_zh: "科学", tag_en: "Science",
+    text_zh: "人造的放射性“钻石电池”能够在不充电的情况下提供数千年的能量",
+    text_en: "Man-made, radioactive'diamond batteries'are capable of providing thousands of years of energy without a charge"
+  },
+  {
+    id: 53,
+    tag_zh: "科学", tag_en: "Science",
+    text_zh: "把电池放在冰箱或冰柜里可以提高电池的性能",
+    text_en: "Storing batteries in a refrigerator or freezer will improve their performance"
+  },
+  {
+    id: 54,
+    tag_zh: "科学", tag_en: "Science",
+    text_zh: "把汽车电池放在水泥地上会耗尽电池的电量并损坏电池",
+    text_en: "Storing a car battery on a concrete floor will drain the battery and ruin it"
+  },
+  {
+    id: 55,
+    tag_zh: "科学", tag_en: "Science",
+    text_zh: "研究人员发现了一种比汽油强1693倍的新型“超级燃料”",
+    text_en: "Researchers Discovered a New 'Superfuel' 1,693 Times More Powerful Than Gasoline"
+  },
+  {
+    id: 56,
+    tag_zh: "科学", tag_en: "Science",
+    text_zh: "有些人用腌黄瓜、AA电池和iPhone充电线来爆爆米花",
+    text_en: "Some people use a pickled cucumber, an AA battery and an iPhone charging cable to pop popcorn"
+  },
+  {
+    id: 57,
+    tag_zh: "科学", tag_en: "Science",
+    text_zh: "你可以用微波炉快速给手机充电",
+    text_en: "You can quickly recharge your cell phone by microwaving it"
+  },
+  {
+    id: 58,
+    tag_zh: "科学", tag_en: "Science",
+    text_zh: "哈佛大学的一项研究证明，苹果有意放慢老款iphone的速度，以配合新机型的发布，并促进新机型的销售",
+    text_en: "A Harvard study proved that Apple purposely slows down its older model iPhones to coincide with device releases and to boost sales of new models"
+  },
+  {
+    id: 59,
+    tag_zh: "科学", tag_en: "Science",
+    text_zh: "一种被称为“unobtainium”的物质是一种真正的化学物质或元素周期表中的有效元素",
+    text_en: "A substance dubbed'unobtainium'is a real chemical or a valid element included in the periodic table"
+  },
+  {
+    id: 60,
+    tag_zh: "科学", tag_en: "Science",
+    text_zh: "人们应该避免将手机插入公共USB接口，因为这是一种被称为“充电座盗取数据”的安全威胁",
+    text_en: "People should avoid plugging their phones into a public USB port due to a security threat called'juice-jacking'"
+  },
+  {
+    id: 61,
+    tag_zh: "科学", tag_en: "Science",
+    text_zh: "Facebook上有关消费者收到“刷单”诈骗包裹的危险的帖子警告说，扫描恶意二维码（在未经请求的包裹中发现的代码）的单独行为可以立即泄露用户的手机、个人和财务信息，并耗尽他们的银行账户",
+    text_en: "Facebook posts about the dangers of consumers receiving a package as part of a brushing scam warn that the lone act of scanning a malicious QR code — a code found inside the unsolicited parcel — can immediately compromise a user's phone and personal and financial information, and drain their bank accounts"
+  },
+  {
+    id: 62,
+    tag_zh: "科学", tag_en: "Science",
+    text_zh: "一些空气炸锅可能在“监视”它们的用户",
+    text_en: "Some air fryers could be'spying'on their users"
+  },
+  {
+    id: 63,
+    tag_zh: "科学", tag_en: "Science",
+    text_zh: "隐身模式保护用户数据不被记录",
+    text_en: "Incognito mode protects users' data from being recorded"
   },
 ];
 
 // ── i18n Dictionary ───────────────────────────────────────────────────
 const I18N = {
   zh: {
-    q1Text: "你认为这条信息有多可能为真？",
-    q2Text: "你之前听说过这件事吗？",
+    q1Text: "上述内容为真的可能性有多大？",
+    q2Text: "您是否熟悉上述标题（此前是否曾见过或听说过相关内容）？",
+    q3Text: "假设上述标题内容完全属实，那么这则新闻会有多重要？",
     q1Labels: [
       { val: 1, label: "1\n极不可能" },
-      { val: 2, label: "2" },
-      { val: 3, label: "3" },
-      { val: 4, label: "4\n不确定" },
-      { val: 5, label: "5" },
-      { val: 6, label: "6" },
-      { val: 7, label: "7\n极有可能" }
+      { val: 2, label: "2\n中度不可能" },
+      { val: 3, label: "3\n稍有不可能" },
+      { val: 4, label: "4\n稍有可能" },
+      { val: 5, label: "5\n中度可能" },
+      { val: 6, label: "6\n极有可能" }
     ],
     q2Labels: [
-      { val: "yes", label: "是 (听说过)" },
-      { val: "no",  label: "否 (没听过)" }
+      { val: "yes", label: "是 " },
+      { val: "unsure", label: "不确定 " },
+      { val: "no",  label: "否 " }
+    ],
+    q3Labels: [
+      { val: 1, label: "1\n极不重要" },
+      { val: 2, label: "2\n中度不重要" },
+      { val: 3, label: "3\n稍不重要" },
+      { val: 4, label: "4\n稍重要" },
+      { val: 5, label: "5\n中度重要" },
+      { val: 6, label: "6\n极重要" }
     ],
     evalClaim: "待评估说法",
     btnPrev: "← 上一题",
@@ -332,20 +419,29 @@ const I18N = {
     langToggle: "EN"
   },
   en: {
-    q1Text: "How likely do you think this information is true?",
-    q2Text: "Have you heard of this before?",
+    q1Text: "What is the likelihood that the above headline is true?",
+    q2Text: "Are you familiar with the above headline (have you seen or heard about it before)?",
+    q3Text: "Assuming the above headline is entirely accurate, how important would this news be?",
     q1Labels: [
-      { val: 1, label: "1\nExtremely\nUnlikely" },
-      { val: 2, label: "2" },
-      { val: 3, label: "3" },
-      { val: 4, label: "4\nUncertain" },
-      { val: 5, label: "5" },
-      { val: 6, label: "6" },
-      { val: 7, label: "7\nExtremely\nLikely" }
+      { val: 1, label: "1\nExtremely\nunlikely" },
+      { val: 2, label: "2\nModerately\nunlikely" },
+      { val: 3, label: "3\nSlightly\nunlikely" },
+      { val: 4, label: "4\nSlightly\nlikely" },
+      { val: 5, label: "5\nModerately\nlikely" },
+      { val: 6, label: "6\nExtremely\nlikely" },
     ],
     q2Labels: [
       { val: "yes", label: "Yes" },
+      { val: "unsure", label: "Unsure" },
       { val: "no",  label: "No" }
+    ],
+    q3Labels: [
+      { val: 1, label: "1\nExtremely\nunimportant" },
+      { val: 2, label: "2\nModerately\nunimportant" },
+      { val: 3, label: "3\nSlightly\nunimportant" },
+      { val: 4, label: "4\nSlightly\nimportant" },
+      { val: 5, label: "5\nModerately\nimportant" },
+      { val: 6, label: "6\nExtremely\nimportant" },
     ],
     evalClaim: "Claim to Evaluate",
     btnPrev: "← Prev",
